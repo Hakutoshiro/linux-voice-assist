@@ -260,11 +260,11 @@ class VoiceAssistant(QMainWindow):
         try:
             # Use firejail to create a sandboxed environment
             result = subprocess.run([
+                'sudo',
                 'firejail',
                 '--noprofile',
                 '--quiet',
                 '--private',
-                '--noroot',
                 '--net=none',
                 '--nosound',
                 '--no3d',

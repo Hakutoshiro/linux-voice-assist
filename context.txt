@@ -115,3 +115,452 @@ Question: How can I configure network settings? Answer: On most Linux systems, n
 Question: How do I fix a broken package installation? Answer: On Debian-based systems, use sudo apt --fix-broken install. For Red Hat-based systems, sudo dnf clean all and sudo dnf update might resolve dependency issues.
 
 
+Question: How do I check the system uptime?
+Answer: Use uptime to see how long the system has been running and the current load average.
+
+Question: How do I list all running processes?
+Answer: The command ps aux lists all running processes with details like user, CPU, and memory usage.
+
+Question: How can I view disk usage for a specific directory?
+Answer: Use du -sh /path/to/directory to view the total disk usage of the specified directory in a human-readable format.
+
+Question: How do I kill a process by its PID?
+Answer: Use kill <PID> to terminate a process by its process ID. For a more forceful termination, use kill -9 <PID>.
+
+Question: How can I check the current users logged into the system?
+Answer: Use the command who to list all currently logged-in users.
+
+Question: How do I check the version of the Linux kernel?
+Answer: Run uname -r to display the current kernel version.
+
+Question: How can I view the last logins of users?
+Answer: Use last to view a list of the last logged-in users and their login times.
+
+Question: How do I check the network configuration of my device?
+Answer: Use ifconfig or ip a to display network interface configurations.
+
+Question: How do I check the status of a specific service?
+Answer: Use systemctl status <service_name> to check the status of a service managed by systemd.
+
+Question: How do I start a service?
+Answer: Use systemctl start <service_name> to start a specific service.
+
+Question: How do I stop a service?
+Answer: Use systemctl stop <service_name> to stop a running service.
+
+Question: How do I restart a service?
+Answer: Use systemctl restart <service_name> to restart a service.
+
+Question: How do I enable a service to start at boot?
+Answer: Use systemctl enable <service_name> to configure a service to start on boot.
+
+Question: How can I disable a service from starting at boot?
+Answer: Use systemctl disable <service_name> to prevent a service from starting automatically at boot.
+
+Question: How do I view system logs?
+Answer: Use journalctl to view logs collected by the systemd journal.
+
+Question: How can I find files by name?
+Answer: Use find /path/to/search -name "filename" to locate files by name.
+
+Question: How do I search for a specific text within files?
+Answer: Use grep "text" /path/to/files/* to search for a specific text string within files.
+
+Question: How can I check the available memory?
+Answer: Use free -h to see memory usage, with the available column showing how much RAM is still available.
+
+Question: How do I check the current CPU usage?
+Answer: Run top or htop for real-time CPU usage monitoring.
+
+Question: How can I check the load average on the system?
+Answer: Use uptime or cat /proc/loadavg to view the system's load average over the last 1, 5, and 15 minutes.
+
+Question: How do I check the number of open files?
+Answer: Use lsof | wc -l to count the total number of open files.
+
+Question: How do I display disk partition information?
+Answer: Use lsblk to list all available block devices and their partition information.
+
+Question: How do I check the current date and time?
+Answer: Use the date command to display the current date and time.
+
+Question: How can I view the history of commands executed in the shell?
+Answer: Use the history command to see a list of previously executed commands.
+
+Question: How do I change the hostname of my device?
+Answer: Use hostnamectl set-hostname new-hostname to change the device's hostname.
+
+Question: How do I view the current environment variables?
+Answer: Use printenv to list all current environment variables.
+
+Question: How can I set a new environment variable?
+Answer: Use export VAR_NAME=value to set a new environment variable for the current session.
+
+Question: How do I check if a port is open?
+Answer: Use netstat -tuln | grep <port_number> to check if a specific port is listening.
+
+Question: How do I monitor network connections?
+Answer: Use netstat -tuln to display active network connections and their status.
+
+Question: How can I test network connectivity?
+Answer: Use ping <hostname> to test connectivity to a specific host.
+
+Question: How do I download a file from the internet?
+Answer: Use wget <URL> to download files from the web using the wget utility.
+
+Question: How can I compress files into a zip archive?
+Answer: Use zip archive.zip file1 file2 to compress files into a zip archive.
+
+Question: How do I extract files from a zip archive?
+Answer: Use unzip archive.zip to extract files from a zip archive.
+
+Question: How do I copy files?
+Answer: Use cp source_file destination_file to copy files from one location to another.
+
+Question: How can I move or rename files?
+Answer: Use mv old_file new_file to move or rename files.
+
+Question: How do I delete files?
+Answer: Use rm file_name to delete a specific file.
+
+Question: How do I delete a directory and its contents?
+Answer: Use rm -r directory_name to recursively delete a directory and all its contents.
+
+Question: How do I create a new directory?
+Answer: Use mkdir new_directory to create a new directory.
+
+Question: How do I change permissions on a file?
+Answer: Use chmod 755 file_name to change file permissions (read, write, execute).
+
+Question: How do I change the owner of a file?
+Answer: Use chown username:groupname file_name to change the file's owner.
+
+Question: How can I check if a package is installed?
+Answer: Use dpkg -l | grep package_name for Debian-based systems or rpm -q package_name for RPM-based systems.
+
+Question: How do I install a package using apt?
+Answer: Use sudo apt install package_name to install a package on Debian-based systems.
+
+Question: How can I update all installed packages?
+Answer: Use sudo apt update && sudo apt upgrade to update the package list and upgrade all packages.
+
+Question: How do I remove an installed package?
+Answer: Use sudo apt remove package_name to uninstall a package from your system.
+
+Question: How can I find out which services are running?
+Answer: Use systemctl list-units --type=service to see a list of all active services.
+
+Question: How do I find the path of a command?
+Answer: Use which command_name to find the path to the executable of a command.
+
+Question: How do I display the current working directory?
+Answer: Use pwd to print the current working directory.
+
+Question: How do I change the current directory?
+Answer: Use cd /path/to/directory to change the current directory.
+
+Question: How do I get help for a specific command?
+Answer: Use man command_name to view the manual page for a specific command.
+
+Question: How do I check for a specific process running?
+Answer: Use pgrep process_name to search for a process by its name.
+
+Question: How can I view the contents of a text file?
+Answer: Use cat file_name to display the contents of a text file.
+
+Question: How do I display the first few lines of a file?
+Answer: Use head file_name to display the first 10 lines of a file.
+
+Question: How do I display the last few lines of a file?
+Answer: Use tail file_name to display the last 10 lines of a file.
+
+Question: How can I sort the contents of a file?
+Answer: Use sort file_name to sort the contents of a file alphabetically.
+
+Question: How do I count the number of lines in a file?
+Answer: Use wc -l file_name to count the number of lines in a file.
+
+Question: How can I find the size of a file?
+Answer: Use du -h file_name to display the size of a specific file.
+
+Question: How do I view active user sessions?
+Answer: Use who to display information about logged-in users.
+
+Question: How do I check the file system type?
+Answer: Use df -T to display file system types for each mounted partition.
+
+Question: How do I change the default runlevel?
+Answer: Modify the /etc/inittab file or use systemctl set-default target to change the default runlevel.
+
+Question: How do I check for kernel messages?
+Answer: Use dmesg to display kernel-related messages.
+
+Question: How do I clear the terminal screen?
+Answer: Use clear or press Ctrl + L to clear the terminal screen.
+
+Question: How do I display information about the CPU?
+Answer: Use lscpu to display detailed CPU architecture information.
+
+Question: How do I check the system architecture?
+Answer: Use uname -m to check the architecture of your system.
+
+Question: How do I list the contents of a directory?
+Answer: Use ls -l to list files in a directory with detailed information.
+
+Question: How can I check the current time zone?
+Answer: Use timedatectl to display the current time zone settings.
+
+Question: How do I set the system time?
+Answer: Use sudo timedatectl set-time "YYYY-MM-DD HH:MM:SS" to set the system time.
+
+Question: How do I list all available time zones?
+Answer: Use timedatectl list-timezones to display a list of all available time zones.
+
+Question: How do I set a static IP address?
+Answer: Edit the network configuration file (e.g., /etc/network/interfaces or use nmcli) to set a static IP address.
+
+Question: How do I check for hardware information?
+Answer: Use lshw to display detailed information about the hardware components of your system.
+
+Question: How do I find the MAC address of my network interface?
+Answer: Use ip link or ifconfig to find the MAC address of the active network interface.
+
+Question: How do I create a symbolic link?
+Answer: Use ln -s target_file link_name to create a symbolic link to a file.
+
+Question: How do I view active listening ports?
+Answer: Use netstat -tuln to display all active listening ports on your machine.
+
+Question: How do I display the disk usage of each directory?
+Answer: Use du -h --max-depth=1 to show the disk usage of directories within the current directory.
+
+Question: How do I find the process ID of a running application?
+Answer: Use pidof application_name to get the process ID of a running application.
+
+Question: How can I check for available updates in Ubuntu?
+Answer: Use sudo apt update to refresh the list of available packages and updates.
+
+Question: How do I display the current disk I/O statistics?
+Answer: Use iostat to view disk I/O statistics for your system.
+
+Question: How do I disable a specific service?
+Answer: Use systemctl stop <service_name> followed by systemctl disable <service_name> to stop and disable a service.
+
+Question: How do I view the current session information?
+Answer: Use whoami to display the currently logged-in user's username.
+
+Question: How do I configure a firewall rule?
+Answer: Use ufw allow <port_number> to allow traffic through a specific port with UFW.
+
+Question: How do I enable the firewall?
+Answer: Use sudo ufw enable to activate the firewall.
+
+Question: How do I disable the firewall?
+Answer: Use sudo ufw disable to deactivate the firewall.
+
+Question: How do I view the current running kernel parameters?
+Answer: Use sysctl -a to display all current kernel parameters.
+
+Question: How do I add a new user?
+Answer: Use sudo adduser username to create a new user account.
+
+Question: How do I delete a user?
+Answer: Use sudo deluser username to remove a user account.
+
+Question: How can I check the status of network interfaces?
+Answer: Use ip link show to display the status of network interfaces.
+
+Question: How do I check disk health and status?
+Answer: Use smartctl -a /dev/sdX to view the SMART status of a hard drive.
+
+Question: How do I create a new group?
+Answer: Use sudo groupadd groupname to create a new group.
+
+Question: How do I add a user to a group?
+Answer: Use sudo usermod -aG groupname username to add a user to a specific group.
+
+Question: How do I view disk partition information?
+Answer: Use fdisk -l to list disk partitions and their sizes.
+
+Question: How do I check the system's hostname?
+Answer: Use hostname to display the current hostname of the system.
+
+Question: How do I change the default shell for a user?
+Answer: Use chsh -s /path/to/shell username to change the user's default shell.
+
+Question: How do I check for broken package dependencies?
+Answer: Use sudo apt --fix-broken install to fix broken dependencies on a Debian-based system.
+
+Question: How do I list all installed packages?
+Answer: Use dpkg -l to list all installed packages on a Debian-based system.
+
+Question: How do I view CPU temperature?
+Answer: Use sensors (after installing lm-sensors) to display CPU temperature readings.
+
+Question: How do I configure network settings temporarily?
+Answer: Use ip addr add <IP_address>/<CIDR> dev <interface> to set a temporary IP address.
+
+Question: How do I get information about disk usage in a human-readable format?
+Answer: Use df -h to display disk space usage in a human-readable format.
+
+Question: How do I check the available swap memory?
+Answer: Use free -h to check the swap memory usage, along with RAM.
+
+Question: How do I display current routing table information?
+Answer: Use route -n or ip route to display the current routing table.
+
+Question: How do I view system performance statistics?
+Answer: Use sar to display system performance statistics.
+
+Question: How do I configure a static DNS server?
+Answer: Edit the /etc/resolv.conf file and add nameserver <DNS_IP> to set a static DNS server.
+
+Question: How do I check the status of all services?
+Answer: Use systemctl list-units --type=service --all to see the status of all services, including inactive ones.
+
+Question: How do I change the time zone of the system?
+Answer: Use sudo timedatectl set-timezone Region/City to change the system's time zone.
+
+Question: How do I list all users on the system?
+Answer: Use cat /etc/passwd to view a list of all users on the system.
+
+Question: How do I find out what packages are using a lot of disk space?
+Answer: Use dpkg-query -W --showformat='${Package}\t${Installed-Size}\n' | sort -k2 -n to list packages by installed size.
+
+Question: How do I check the SSH service status?
+Answer: Use systemctl status ssh to check the status of the SSH service.
+
+Question: How do I back up a directory?
+Answer: Use tar -czvf backup.tar.gz /path/to/directory to create a compressed backup of a directory.
+
+Question: How do I restore a backup from a tar file?
+Answer: Use tar -xzvf backup.tar.gz to extract a tarball and restore the contents.
+
+Question: How can I list all environment variables?
+Answer: Use printenv or env to display all current environment variables.
+
+Question: How do I find a specific file type in a directory?
+Answer: Use find /path/to/directory -type f -name "*.txt" to find all text files in a directory.
+
+Question: How do I check the system's hostname resolution?
+Answer: Use nslookup hostname or dig hostname to check DNS resolution for a hostname.
+
+Question: How do I enable IP forwarding?
+Answer: Use echo 1 > /proc/sys/net/ipv4/ip_forward to enable IP forwarding temporarily, or edit /etc/sysctl.conf for a permanent change.
+
+Question: How do I check for memory leaks in a process?
+Answer: Use valgrind --leak-check=full ./your_program to analyze memory leaks in a specific program.
+
+Question: How do I check the status of mounted filesystems?
+Answer: Use mount | column -t to see all mounted filesystems and their options.
+
+Question: How do I check the load average over time?
+Answer: Use cat /proc/loadavg to view the load average over the last 1, 5, and 15 minutes.
+
+Question: How do I display disk space usage for all mounted filesystems?
+Answer: Use df -h to display human-readable disk space usage for all mounted filesystems.
+
+Question: How do I see which users have a specific process running?
+Answer: Use ps -ef | grep process_name to see which users are running a specific process.
+
+Question: How do I create a new file?
+Answer: Use touch filename to create a new, empty file.
+
+Question: How do I view the contents of a compressed file without extracting it?
+Answer: Use zcat file.gz to view the contents of a gzipped file.
+
+Question: How do I check for listening ports and their associated processes?
+Answer: Use lsof -i -P to list all listening ports along with the associated processes.
+
+Question: How do I check the system's swap usage?
+Answer: Use swapon --show to display information about swap space in use.
+
+Question: How do I find out which services are using the most CPU?
+Answer: Use top and sort by the CPU column or use ps aux --sort=-%cpu to list services by CPU usage.
+
+Question: How do I add a repository to the package manager?
+Answer: Use sudo add-apt-repository ppa:repository_name to add a PPA to the package manager on Ubuntu.
+
+Question: How do I display network statistics?
+Answer: Use netstat -s to view network statistics for all protocols.
+
+Question: How do I change the default editor?
+Answer: Use update-alternatives --config editor to set the default text editor.
+
+Question: How do I check which processes are using the most memory?
+Answer: Use ps aux --sort=-%mem | head to display the top memory-consuming processes.
+
+Question: How do I display information about the GPU?
+Answer: Use lspci | grep -i vga to list details about the GPU.
+
+Question: How do I check file permissions?
+Answer: Use ls -l filename to view the permissions associated with a file.
+
+Question: How do I find the disk usage of the home directory?
+Answer: Use du -sh ~ to display the disk usage of the home directory in a human-readable format.
+
+Question: How do I remove unused packages?
+Answer: Use sudo apt autoremove to remove packages that are no longer needed.
+
+Question: How do I check for running cron jobs?
+Answer: Use crontab -l to list the current user's scheduled cron jobs.
+
+Question: How do I check which packages have been installed recently?
+Answer: Use grep " install " /var/log/dpkg.log to find recently installed packages.
+
+Question: How do I run a command as another user?
+Answer: Use su - username -c "command" to run a command as another user.
+
+Question: How do I check the battery status?
+Answer: Use upower -i /org/freedesktop/UPower/devices/battery_BAT0 to view battery status on laptops.
+
+Question: How do I see a list of all available commands in the shell?
+Answer: Use compgen -c to display a list of all available shell commands.
+
+Question: How do I check the status of SELinux?
+Answer: Use sestatus to check if SELinux is enabled or disabled.
+
+Question: How do I display the routing table?
+Answer: Use route -n to display the current routing table.
+
+Question: How do I find the process using a specific file?
+Answer: Use lsof /path/to/file to find the process that is using a specific file.
+
+Question: How do I display system boot time?
+Answer: Use who -b to view the last time the system was booted.
+
+Question: How do I configure network interfaces?
+Answer: Edit the /etc/network/interfaces file or use nmcli to configure network interfaces.
+
+Question: How do I check if a particular port is open on a remote server?
+Answer: Use telnet <hostname> <port> or nc -zv <hostname> <port> to check connectivity to a specific port.
+
+Question: How do I perform a network speed test?
+Answer: Use speedtest-cli (install it first) to measure your internet connection speed.
+
+Question: How do I get detailed information about a specific package?
+Answer: Use apt show package_name to view detailed information about an installed package.
+
+Question: How do I schedule a command to run at a specific time?
+Answer: Use at <time> to schedule a command to run at a specified time.
+
+Question: How do I view and change the priority of a process?
+Answer: Use nice -n priority command to start a command with a specific priority, or renice to change the priority of a running process.
+
+Question: How do I list all active network connections?
+Answer: Use ss -tuln to display all active TCP and UDP connections.
+
+Question: How do I mount a USB drive?
+Answer: Use mount /dev/sdX1 /mnt/usb to mount a USB drive to the specified mount point.
+
+Question: How do I unmount a filesystem?
+Answer: Use umount /mnt/usb to unmount a filesystem.
+
+Question: How do I view the system's resource usage over time?
+Answer: Use sar -u 1 to monitor CPU usage every second.
+
+Question: How do I get the system's IP address?
+Answer: Use hostname -I to display the system's current IP address.
+
+Question: How do I flush the DNS cache?
+Answer: Use sudo systemd-resolve --flush-caches to flush the DNS cache on systems using systemd-resolved.
