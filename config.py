@@ -15,9 +15,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # Vosk model path
 VOSK_MODEL_PATH = os.getenv("VOSK_MODEL_PATH")
 
-
-
-
 # Prompt template for Gemini API
 PROMPT_TEMPLATE = """
 You are given a task where you need to provide a Bash command that can be directly executed in a Bash script. The command should resolve the issue described below, and your response should follow these rules:

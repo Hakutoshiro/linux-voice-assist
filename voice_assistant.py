@@ -3,20 +3,13 @@ import subprocess
 import logging
 import json
 import tempfile
-import pyttsx3
-# from gtts import gTTS
-# from playsound import playsound
-# from pydub import AudioSegment
-# from pydub.generators import Sine
-# import simpleaudio as sa
 from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QTextEdit, QProgressBar, QApplication
 from PyQt5.QtCore import Qt, QTimer, QThread, pyqtSignal
-from PyQt5.QtGui import QFont, QColor, QPalette, QTextCursor\
-
+from PyQt5.QtGui import QFont, QColor, QPalette, QTextCursor
 from llms.gemini import GeminiService
 import numpy as np
 from llms.groq import GroqService
-
+from tts import text_to_speech
 from config import GEMINI_API_KEY
 
 # import google.generativeai as genai
@@ -27,25 +20,9 @@ from rag_service import RAGService
 
 from create_embeddings import EmbeddingProvider
 
-import google.generativeai as genai
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# Configure the Gemini API
-# genai.configure(api_key=GEMINI_API_KEY)
-
-class TTSThread(QThread):
-    def __init__(self, text):
-        super().__init__()
-        self.text = text
-        
-
-    def run(self):
-        engine = pyttsx3.init()
-        engine.say(self.text)
-        engine.runAndWait()
-        engine.stop()
 
 
 class VoiceAssistant(QMainWindow):
@@ -260,7 +237,6 @@ class VoiceAssistant(QMainWindow):
         try:
             # Use firejail to create a sandboxed environment
             result = subprocess.run([
-                'sudo',
                 'firejail',
                 '--noprofile',
                 '--quiet',
@@ -276,23 +252,11 @@ class VoiceAssistant(QMainWindow):
         finally:
             os.unlink(temp_file_path)
 
-    # def interpret_output(self, original_query, command_output):
-    #     model = genai.GenerativeModel('gemini-1.5-flash')
-    #     prompt = OUTPUT_INTERPRETATION_PROMPT.format(
-    #         query=original_query,
-    #         output=command_output
-    #     )
-    #     response = model.generate_content(prompt)
-    #     return response.text
-
     def speak_text(self, text):
         self.current_status = self.STATUS_SPEAKING
         self.status_label.setText(self.current_status)
-        self.tts_thread = TTSThread(text)
-        self.tts_thread.start()
-        self.tts_thread.wait()  # Wait for the thread to finish
+        text_to_speech(text)
         self.current_status = self.STATUS_IDLE
-        self.status_label.setText(self.current_status)
 
 
 
