@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 load_dotenv()
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain.docstore.document import Document
 
 class RAGService:
     def __init__(self, embeddings_dir: str):
