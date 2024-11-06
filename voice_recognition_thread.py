@@ -33,6 +33,9 @@ class VoiceRecognitionThread(QThread):
         logging.info("Listening for audio input")
 
         try:
+            # clear the buffer
+            sd.default.device = None
+            self.rec = KaldiRecognizer(self.model, 16000)
             # Record audio
             duration = 4  # seconds
             fs = 16000  # Sample rate (Vosk models typically expect 16kHz)
