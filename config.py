@@ -14,7 +14,7 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Vosk model path
 VOSK_MODEL_PATH = os.getenv("VOSK_MODEL_PATH")
-
+EMBEDDINGS_DIR_PATH = os.getenv("EMBEDDINGS_DIR_PATH")
 
 
 
